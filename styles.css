@@ -1,4 +1,8 @@
 
+img {
+  width: 100px
+}
+
 .background-container {
   background-color: darkgreen;
   position: absolute;
@@ -6,8 +10,4 @@
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-.p {
-  font-size: 100px;
 }
