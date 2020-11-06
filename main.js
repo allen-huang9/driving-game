@@ -1,6 +1,8 @@
 
 var carObject = {
-  direction: 'east'
+  direction: 'east',
+  coordinteX: 0,
+  coordinteY: 0
 }
 
 var $car = document.querySelector('.car');
@@ -54,11 +56,6 @@ document.addEventListener('keydown', function(e) {
       carObject.direction = 'east';
 
     }
-
-  } else if (e.code === 'KeyS') {
-
-  } else if (e.code === 'KeyW') {
-
   }
 
 });
