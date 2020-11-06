@@ -1,42 +1,58 @@
 
-var $car = document.querySelector('.car');
+var carObject = {
+  direction: 'east'
+}
 
-var direction = 0;
+var $car = document.querySelector('.car');
 
 document.addEventListener('keydown', function(e) {
 
   if(e.code === 'KeyA') {
-    direction--;
 
-    if(direction < 0) {
-      direction = 3;
-    }
+    if(carObject.direction === 'east') {
 
-    if(direction === 3) {
-      $car.className = 'car up';
-    } else if (direction === 2) {
-      $car.className = 'car right';
-    } else if (direction === 1) {
-      $car.className = 'car down';
-    } else {
+      $car.className = 'car direction-north';
+      carObject.direction = 'north'
+
+    } else if (carObject.direction === 'north') {
+
+      $car.className = 'car direction-west';
+      carObject.direction = 'west';
+
+    } else if (carObject.direction === 'west') {
+
+      $car.className = 'car direction-south';
+      carObject.direction = 'south';
+
+    } else if (carObject.direction === 'south') {
+
       $car.className = 'car';
+      carObject.direction = 'east';
+
     }
 
   } else if (e.code === 'KeyD') {
-    direction++;
 
-    if (direction > 3) {
-      direction = 0;
-    }
+    if (carObject.direction === 'east') {
 
-    if (direction === 3) {
-      $car.className = 'car up';
-    } else if (direction === 2) {
-      $car.className = 'car right';
-    } else if (direction === 1) {
-      $car.className = 'car down';
-    } else {
+      $car.className = 'car direction-south';
+      carObject.direction = 'south'
+
+    } else if (carObject.direction === 'south') {
+
+      $car.className = 'car direction-west';
+      carObject.direction = 'west';
+
+    } else if (carObject.direction === 'west') {
+
+      $car.className = 'car direction-north';
+      carObject.direction = 'north';
+
+    } else if (carObject.direction === 'north') {
+
       $car.className = 'car';
+      carObject.direction = 'east';
+
     }
 
   } else if (e.code === 'KeyS') {
