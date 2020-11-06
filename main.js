@@ -9,19 +9,35 @@ document.addEventListener('keydown', function(e) {
     direction--;
 
     if(direction < 0) {
-      direction = 8 - (-1*direction);
+      direction = 3;
     }
 
-    $car.className = 'car direction' + direction;
+    if(direction === 3) {
+      $car.className = 'car up';
+    } else if (direction === 2) {
+      $car.className = 'car right';
+    } else if (direction === 1) {
+      $car.className = 'car down';
+    } else {
+      $car.className = 'car';
+    }
 
   } else if (e.code === 'KeyD') {
     direction++;
 
-    if (direction > 7) {
+    if (direction > 3) {
       direction = 0;
     }
 
-    $car.className = 'car direction' + direction;
+    if (direction === 3) {
+      $car.className = 'car up';
+    } else if (direction === 2) {
+      $car.className = 'car right';
+    } else if (direction === 1) {
+      $car.className = 'car down';
+    } else {
+      $car.className = 'car';
+    }
 
   } else if (e.code === 'KeyS') {
 
