@@ -1,6 +1,7 @@
 
-img {
-  width: 100px
+.car {
+  width: 100px;
+  transform-origin: center;
 }
 
 .background-container {
@@ -10,4 +11,17 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+
+.direction-south {
+  transform: rotate(90deg);
+}
+
+.direction-west {
+  transform: rotate(180deg);
+}
+
+.direction-north {
+  transform: rotate(270deg);
 }
