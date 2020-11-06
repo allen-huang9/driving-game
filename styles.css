@@ -2,6 +2,7 @@
 .car {
   width: 100px;
   transform-origin: center;
+  position: absolute;
 }
 
 .background-container {

@@ -1,10 +1,13 @@
 
 var carObject = {
-  direction: 'east'
+  direction: 'east',
+  coordinateX: 0,
+  coordinateY: 0
 }
 
 var $car = document.querySelector('.car');
-
+var isRunning = false;
+var runTimer = null;
 document.addEventListener('keydown', function(e) {
 
   if(e.code === 'KeyA') {
@@ -54,11 +57,19 @@ document.addEventListener('keydown', function(e) {
       carObject.direction = 'east';
 
     }
-
-  } else if (e.code === 'KeyS') {
-
-  } else if (e.code === 'KeyW') {
-
+  } else if (e.code === 'Space') {
+    isRunning = !isRunning;
+    if(isRunning) {
+      runTimer = setInterval(moveCar, 16);
+    }
   }
 
 });
+
+function moveCar() {
+
+  carObject.coordinateX += 3;
+  carObject.coordinateY = 0;
+  $car.setAttribute('style', 'left: ' + carObject.coordinateX + 'px;');
+
+}
