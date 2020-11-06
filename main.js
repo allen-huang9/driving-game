@@ -61,6 +61,8 @@ document.addEventListener('keydown', function(e) {
     isRunning = !isRunning;
     if(isRunning) {
       runTimer = setInterval(moveCar, 16);
+    } else {
+      clearInterval(runTimer);
     }
   }
 
