@@ -1,4 +1,9 @@
 
+.car {
+  width: 100px;
+  transform-origin: center;
+}
+
 .background-container {
   background-color: darkgreen;
   position: absolute;
@@ -6,4 +11,33 @@
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+
+.direction1 {
+  transform: rotate(45deg);
+}
+
+.direction2 {
+  transform: rotate(90deg);
+}
+
+.direction3 {
+  transform: rotate(135deg);
+}
+
+.direction4 {
+  transform: rotate(180deg);
+}
+
+.direction5 {
+  transform: rotate(225deg);
+}
+
+.direction6 {
+  transform: rotate(270deg);
+}
+
+.direction7 {
+  transform: rotate(315deg);
 }
